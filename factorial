@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+ int main() 
+{ 
+    int i, n, fact = 1;
+    float sum = 0, flag;
+    
+    printf("Enter the n .i.e limit  value for the sum of series: ");
+    scanf("%d", &n);
+    for (i = 1; i <= n; i++)
+ {
+        fact *= i;
+        flag = 1 / fact;
+        sum += fact; 
+ }
+    printf ("%f is the sum of the series\n", sum);
+    return 0;
+}
