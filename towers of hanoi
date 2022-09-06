@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+void towers(int,char,char,char);
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    int num;
+    scanf("%d",&num);
+    towers(num,'A','C','B');
+    return 0;
+}
+    void towers(int num,char source,char target,char temp)
+    {
+        
+    if(num==1)
+    {
+        printf("\nMove disk 1 from peg %c to peg %c",source,target);
+        return;
+    }
+    towers(num-1,source,temp,target);
+    printf("\nMove disk %d from peg %c to peg %c",num,source,target);
+    towers(num-1,temp,target,target,source);
+    
+}
+
