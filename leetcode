@@ -1,0 +1,18 @@
+#include<stdio.h>
+int josephus(int n,int k)
+{
+
+}
+
+int main()
+{
+ int t;
+scanf("%d",&t);
+while(t--)
+{
+int n,k;
+sacnf("%d%d",&n,&k);
+printf("%d\n",josephus(n,k));
+}
+return 0;
+}
