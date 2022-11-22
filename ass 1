@@ -1,0 +1,6 @@
+p=int(input("principal amount:"))
+t=int(input("time period:"))
+r=float(input("rate of interest:"))
+SI=(p*t*r)/100
+EMI=(SI+p)/t*12
+print("EMI:",EMI)
