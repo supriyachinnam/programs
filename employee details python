@@ -1,0 +1,23 @@
+empnum=int(input("Enter employee no:"))
+empname=input("Enter employee name:")
+empdes=input("Enter employee's job:")
+basicsalary=int(input("Enter employee salary:"))
+da=int(input("Enter employee daily allowance:"))
+ta=int(input("Enter employee travelling allowance:"))
+hra=int(input("Enter employee house rental allowance:"))
+netsalary=basicsalary+da+ta+hra
+if netsalary>100000:
+    tax=netsalary*10/100
+    print("Tax",tax)
+elif netsalary>50000:
+    tax=netsalary*7/100
+    print("Tax",tax)
+elif netsalary>40000:
+    tax=netsalary*4/100
+    print("Tax",tax)
+elif netsalary>20000:
+    tax=netsalary*2/100
+    print("Tax",tax)
+else:
+    tax=0
+    print("Tax:",tax)
