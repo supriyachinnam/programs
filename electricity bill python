@@ -1,0 +1,51 @@
+cuser=int(input("Customer service number:"))
+cusname=input("Customer name:")
+cusaddr=input("Customer adderss:")
+cusphno=int(input("Customer phone number:"))
+older=int(input("Enter old reading: "))
+new=int(input("Enter new reading: "))
+print("Category 1 is for house billing and category 2 is for business purpose")
+cate=int(input("Enter category(1,2): "))
+scate=input("Enter subcategory(A): ")
+units=new-older
+if cate==1:
+    if scate=='A':
+        if units<=30:
+            amt=(units*1.90)+25
+        elif units>30 and units<=75:
+            amt=(units*3.00)+30
+        elif units>75 and units<=125:
+            amt=(units*4.50)+45
+        elif units>125 and units<=225:
+            amt=(units*6.00)+50
+        elif units>225 and units<=400:
+            amt=(units*8.75)+55
+        else:
+            amt=(units*9.75)+55
+    else:
+        print("Please enter correct sub category.")
+elif cate==2:
+    if scate=='A':
+        if units<=50:
+            amt=(units*5.40)+30
+        elif units>50 and units<=100:
+            amt=(units*7.65)+40
+        elif units>100 and units<=300:
+            amt=(units*9.05)+45
+        elif units>300 and units<=500:
+            amt=(units*9.60)+45
+        else:
+            amt=(units*10.15)+45
+    else:
+        print("Please enter correct sub category.")
+else:
+    print("Please enter the correct category(1 or 2)")
+print("The details of the bill:")
+print("Customer service number:",cuser)
+print("Customer name:",cusname)
+print("Customer address:",cusaddr)
+print("Customer phone number:",cusphno)
+print("Old reading:",older)
+print("New reading:",new)
+print("Units:",units)
+print("bill amount:",amt)
