@@ -1,0 +1,29 @@
+brice=250
+bgram=200
+ggram=200
+wf=100
+rf=150
+cphno=input("Enter customer phone number:")
+cname=input("Enter customer name:")
+caddr=input("Enter customer address:")
+briceq=int(input("How much quantity of basmati rice you want:"))
+bgramq=int(input("How much quantity of black gram  you want:"))
+ggramq=int(input("How much quantity of green gram you want:"))
+wfq=int(input("How much quantity of wheat flour you want:"))
+rfq=int(input("How much quantity of ragi flour you want:"))
+bill=(briceq*brice)+(bgramq*bgram)+(ggramq*ggram)+(wfq*wf)+(rfq*rf)
+if bill>=3000:
+   tax=bill*5/100
+elif bill>=2000:
+   tax=bill*7/100
+elif bill>=1000:
+   tax=bill*10/100
+elif bill>=500:
+   tax=bill*15/100
+else:
+   tax=100
+bill=bill+tax
+print("Customer phone number:",cphno)
+print("Customer name:",cname)
+print("Customer address:",caddr)
+print("Bill amount:",bill)
