@@ -1,0 +1,5 @@
+def big_of_two(a,b):
+    print(a,"is big") if a>b else print(b,"is big")if b>a else print("Both are equal")
+a=int(input("Enter a number: "))
+b=int(input("Enter a number: "))
+big_of_two(a,b)
