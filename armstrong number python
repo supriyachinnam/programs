@@ -1,0 +1,16 @@
+n=int(input())
+s=0
+p=q=n
+len=0
+while(p!=0):
+    len=len+1
+    p=p//10
+while(q!=0):
+    r=q%10
+    s=s+(r**len)
+    q=q//10
+if n==s:
+    print("Armstrong Number")
+else:
+    print("Not Armstrong Number")
+
