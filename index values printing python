@@ -1,0 +1,5 @@
+n=int(input())
+l=list(map(int,input().split()))
+print("0 index value:",l[0])
+print("2 index value:",l[2])
+print("4 index value:",l[4])
